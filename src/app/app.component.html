@@ -1,0 +1,21 @@
+<div class="sample-wrapper">
+    <article class="sample-column card-wrapper">
+        <igx-card *ngFor="let card of cards" class="card-entity">
+            <div style="overflow: hidden">
+                <img width="100%" height="100%" [src]="card.imageUrl">
+            </div>
+            <igx-card-header class="center">
+                <h3 class="igx-card-header__title">{{ card.name }}</h3>
+                <h4 class="igx-card-header__subtitle">{{ card.description }}</h4>
+            </igx-card-header>
+            <igx-card-actions class="right">
+                <div class="igx-card-actions__bgroup">
+                    <button igxButton igxRipple>
+                        <a [href]="card.fblink" target="blank" >Open FB event</a>
+                    </button>
+                    <button igxButton igxRipple>Reload</button>
+                </div>
+            </igx-card-actions>
+        </igx-card>
+    </article>
+</div>
